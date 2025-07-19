@@ -14,28 +14,29 @@ Com uma interface moderna e personalizável, o Noesis Dashboard visa simplificar
   - Login seguro para usuários existentes com painel minimalista.  
   - Registro rápido e intuitivo para novos usuários.  
   - Modo Visitante para explorar o sistema sem criar conta.
-
+![](screenshots/Screenshot_19.png)
 - **Gerenciamento de Tarefas 📝:**  
   Criar, visualizar, editar, marcar como concluídas e excluir tarefas para manter seus prazos em dia.
-
+![](screenshots/Screenshot_6.png)
 - **Gerenciamento de Notas 💡:**  
   Adicionar e organizar notas rápidas, ideias e informações importantes.
-
+![](screenshots/Screenshot_4.png)
 - **Gerenciamento de Disciplinas 📚:**  
   Manter registros detalhados de disciplinas, horários, professores e mais.
-
+![](screenshots/Screenshot_3.png)
 - **Gerenciamento de Materiais 📁:**  
   Organizar documentos e recursos importantes por disciplina ou categoria.
-
+![](screenshots/Screenshot_2.png)
 - **Calendário 🗓️:**  
   Visualizar compromissos, prazos e eventos importantes em um calendário interativo.
+![](screenshots/Screenshot_5.png)
 
 - **Dashboard Personalizável 📊:**  
   Visão geral rápida das informações mais importantes com possibilidade de customização.
-
+![](screenshots/Screenshot_1.png)
 - **Temas 🎨:**  
   Alternar entre temas claro, escuro e ciano para adequar a aparência ao seu gosto.
-
+![](screenshots/Screenshot_7.png)
 ---
 
 ## Tecnologias Utilizadas 🛠️
