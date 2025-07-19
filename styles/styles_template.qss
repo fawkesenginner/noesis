@@ -1,0 +1,577 @@
+/* styles_template.qss */
+/* Este arquivo é um template e será preenchido com cores dinamicamente pelo Python */
+
+/* Estilos Globais */
+QMainWindow, QWidget {
+    background-color: _BACKGROUND_COLOR_;
+    color: _TEXT_COLOR_;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    selection-background-color: _PRIMARY_ACCENT_COLOR_;
+    selection-color: _BACKGROUND_COLOR_;
+}
+
+/* Tooltips */
+QToolTip {
+    background-color: _BORDER_COLOR_;
+    color: _TEXT_COLOR_;
+    border: 1px solid _PRIMARY_ACCENT_COLOR_;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    opacity: 200;
+}
+
+/* Barras de Rolagem Personalizadas */
+QScrollBar:vertical {
+    border: none;
+    background: _TERTIARY_BACKGROUND_COLOR_;
+    width: 12px;
+    margin: 15px 0 15px 0;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+    min-height: 30px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: _PRIMARY_ACCENT_HOVER_COLOR_;
+}
+
+QScrollBar::handle:vertical:pressed {
+    background-color: _PRIMARY_ACCENT_PRESSED_COLOR_;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+    height: 0px;
+    width: 0px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: _TERTIARY_BACKGROUND_COLOR_;
+    height: 12px;
+    margin: 0 15px 0 15px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+    min-width: 30px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: _PRIMARY_ACCENT_HOVER_COLOR_;
+}
+
+QScrollBar::handle:horizontal:pressed {
+    background-color: _PRIMARY_ACCENT_PRESSED_COLOR_;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    border: none;
+    background: none;
+    width: 0px;
+    height: 0px;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+
+/* --- ESTILOS DA BARRA DE TÍTULO PERSONALIZADA --- */
+QFrame#customTitleBar {
+    background-color: _TERTIARY_BACKGROUND_COLOR_;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+QLabel#titleLabel {
+    color: _TEXT_COLOR_;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+QPushButton#minimizeButton,
+QPushButton#maximizeButton,
+QPushButton#closeButton {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton#minimizeButton:hover,
+QPushButton#maximizeButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+QPushButton#closeButton:hover {
+    background-color: _DANGER_COLOR_;
+}
+
+QPushButton#minimizeButton:pressed,
+QPushButton#maximizeButton:pressed {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+QPushButton#closeButton:pressed {
+    background-color: _DANGER_HOVER_COLOR_;
+}
+
+
+/* --- FIM DOS ESTILOS DA BARRA DE TÍTULO PERSONALIZADA --- */
+
+
+/* Sidebar */
+QFrame#sidebar {
+    background-color: _TERTIARY_BACKGROUND_COLOR_;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+QLabel#welcomeLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: _PRIMARY_ACCENT_COLOR_;
+    padding-bottom: 10px;
+}
+
+/* Botões da Sidebar */
+QPushButton#sidebarButton {
+    background-color: transparent;
+    color: _TEXT_COLOR_;
+    padding: 12px 0px 12px 35px;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    qproperty-iconSize: 24px 24px;
+    border-radius: 0px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+QPushButton#sidebarButton:hover {
+    background-color: _PRIMARY_ACCENT_ALPHA_20_;
+    color: _PRIMARY_ACCENT_COLOR_;
+}
+
+QPushButton#sidebarButton:pressed {
+    background-color: _PRIMARY_ACCENT_ALPHA_30_;
+}
+
+/* Estilo para o botão ATIVO (selecionado) */
+QPushButton#sidebarButton[active="true"] {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+    color: _BACKGROUND_COLOR_;
+    font-weight: bold;
+    border-left: 5px solid _TEXT_COLOR_;
+    padding-left: 30px;
+}
+
+/* Conteúdo Principal */
+QWidget#contentArea {
+    background-color: _BACKGROUND_COLOR_;
+    padding: 20px;
+}
+
+/* Dashboard Home Page Header */
+QLabel#dashboardHeader {
+    font-size: 28px;
+    font-weight: bold;
+    color: _PRIMARY_ACCENT_COLOR_;
+    margin-bottom: 20px;
+}
+
+/* Cartões do Dashboard */
+QFrame#dashboardCard {
+    background-color: _SECONDARY_BACKGROUND_COLOR_;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+}
+
+QLabel#cardTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: _PRIMARY_ACCENT_COLOR_;
+    margin-bottom: 5px;
+}
+
+QLabel#cardContent {
+    font-size: 14px;
+    color: _SUBTLE_TEXT_COLOR_;
+    line-height: 1.4;
+}
+
+QProgressBar {
+    border: 1px solid _BORDER_COLOR_;
+    border-radius: 5px;
+    text-align: center;
+    background-color: _TERTIARY_BACKGROUND_COLOR_;
+    color: _TEXT_COLOR_;
+    height: 20px;
+}
+QProgressBar::chunk {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+    border-radius: 5px;
+}
+
+/* Seção de Notas Rápidas */
+QFrame#quickNotesFrame {
+    background-color: _SECONDARY_BACKGROUND_COLOR_;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+QLabel#sectionHeader {
+    font-size: 20px;
+    font-weight: bold;
+    color: _TEXT_COLOR_;
+    margin-bottom: 15px;
+}
+
+/* Campos de Entrada (QLineEdit, QTextEdit) - Geral e Específicos */
+QLineEdit, QTextEdit {
+    background-color: _SECONDARY_BACKGROUND_COLOR_;
+    border: 1px solid _BORDER_COLOR_;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: _TEXT_COLOR_;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+QLineEdit:hover, QTextEdit:hover {
+    border: 1px solid _PRIMARY_ACCENT_COLOR_;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 1px solid _PRIMARY_ACCENT_COLOR_;
+    background-color: _BORDER_COLOR_;
+}
+
+QLineEdit::placeholder, QTextEdit::placeholder {
+    color: _PLACEHOLDER_TEXT_COLOR_;
+}
+
+QLabel#notesDisabledLabel {
+    color: _SUBTLE_TEXT_COLOR_;
+    font-style: italic;
+    padding: 10px;
+}
+
+QLabel#noteFeedbackLabel {
+    padding: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Botões Gerais (se não tiverem um #objectName específico) */
+QPushButton {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+    color: _BACKGROUND_COLOR_;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: _PRIMARY_ACCENT_HOVER_COLOR_;
+}
+
+QPushButton:pressed {
+    background-color: _PRIMARY_ACCENT_PRESSED_COLOR_;
+}
+
+
+/* Estilos de botões com objectName específicos (mantidos com prioridade) */
+QPushButton#primaryButton {
+    /* Já definidos acima no estilo geral QPushButton */
+}
+
+QPushButton#primaryButton:hover {
+    /* Já definidos acima no estilo geral QPushButton */
+}
+
+QPushButton#primaryButton:pressed {
+    /* Já definidos acima no estilo geral QPushButton */
+}
+
+QPushButton#dangerButton {
+    background-color: _DANGER_COLOR_;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+QPushButton#dangerButton:hover {
+    background-color: _DANGER_HOVER_COLOR_;
+}
+QPushButton#dangerButton:pressed {
+    background-color: _DANGER_PRESSED_COLOR_;
+}
+
+
+QScrollArea#quickNotesScrollArea {
+    border: 1px solid _BORDER_COLOR_;
+    border-radius: 5px;
+    background-color: _BORDER_COLOR_;
+}
+
+QScrollArea#quickNotesScrollArea > QWidget > QWidget {
+    background-color: transparent;
+}
+
+QFrame#noteItem {
+    background-color: _NOTE_ITEM_BACKGROUND_COLOR_; /* Uma cor específica para itens de nota, pode ser derivada ou fixa */
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 10px;
+}
+
+QLabel#noteContent {
+    font-size: 14px;
+    color: _TEXT_COLOR_;
+    margin-bottom: 5px;
+}
+
+QLabel#noteDate {
+    font-size: 12px;
+    color: _SUBTLE_TEXT_COLOR_;
+    margin-top: 5px;
+}
+
+
+/* Estilos para QCalendarWidget */
+QCalendarWidget QWidget#qt_calendar_navigationbar {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+    border-bottom: 1px solid _BORDER_COLOR_;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+QCalendarWidget QToolButton {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+    color: white;
+    icon-size: 20px;
+    margin: 5px;
+    border-radius: 3px;
+}
+QCalendarWidget QToolButton:hover {
+    background-color: _PRIMARY_ACCENT_HOVER_COLOR_;
+}
+QCalendarWidget QToolButton:pressed {
+    background-color: _PRIMARY_ACCENT_PRESSED_COLOR_;
+}
+QCalendarWidget QToolButton::menu-indicator {
+    image: none;
+}
+
+QCalendarWidget QSpinBox {
+    background-color: _SECONDARY_BACKGROUND_COLOR_;
+    border: 1px solid _BORDER_COLOR_;
+    color: _TEXT_COLOR_;
+    border-radius: 3px;
+}
+QCalendarWidget QSpinBox::up-button, QCalendarWidget QSpinBox::down-button {
+    width: 20px;
+    height: 15px;
+    background-color: _BORDER_COLOR_;
+    border-radius: 3px;
+}
+QCalendarWidget QSpinBox::up-button:hover, QCalendarWidget QSpinBox::down-button:hover {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+}
+QCalendarWidget QSpinBox::up-arrow, QCalendarWidget QSpinBox::down-arrow {
+    image: none;
+}
+
+QCalendarWidget QAbstractItemView {
+    alternate-background-color: _TERTIARY_BACKGROUND_COLOR_;
+    background-color: _SECONDARY_BACKGROUND_COLOR_;
+    color: _TEXT_COLOR_;
+    selection-background-color: _PRIMARY_ACCENT_HOVER_COLOR_;
+    selection-color: white;
+    border: 1px solid _BORDER_COLOR_;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    outline: 0;
+}
+
+QCalendarWidget QAbstractItemView:disabled {
+    color: _PLACEHOLDER_TEXT_COLOR_;
+}
+
+QCalendarWidget QAbstractItemView:enabled:!selected:!hover {
+    color: _WARNING_COLOR_;
+}
+QCalendarWidget QAbstractItemView:enabled:hover {
+    background-color: _PRIMARY_ACCENT_ALPHA_20_;
+}
+
+
+/* Estilos para QTableWidget */
+QTableWidget {
+    background-color: _SECONDARY_BACKGROUND_COLOR_;
+    border: 1px solid _BORDER_COLOR_;
+    border-radius: 8px;
+    color: _TEXT_COLOR_;
+    gridline-color: _BORDER_COLOR_;
+    selection-background-color: _PRIMARY_ACCENT_HOVER_COLOR_;
+    selection-color: white;
+    alternate-background-color: _TERTIARY_BACKGROUND_COLOR_;
+}
+
+QTableWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid _BORDER_COLOR_;
+}
+
+QTableWidget::item:selected {
+    background-color: _PRIMARY_ACCENT_HOVER_COLOR_;
+    color: white;
+}
+
+QTableWidget::item:hover {
+    background-color: _PRIMARY_ACCENT_ALPHA_20_;
+}
+
+
+QHeaderView::section {
+    background-color: _TERTIARY_BACKGROUND_COLOR_;
+    color: _PRIMARY_ACCENT_COLOR_;
+    padding: 8px;
+    border: 1px solid _BORDER_COLOR_;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+}
+
+QHeaderView::section:horizontal {
+    border-top: none;
+}
+
+QHeaderView::section:vertical {
+    border-left: none;
+}
+
+/* Estilo para QComboBox */
+QComboBox {
+    background-color: _SECONDARY_BACKGROUND_COLOR_;
+    border: 1px solid _BORDER_COLOR_;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: _TEXT_COLOR_;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+QComboBox:hover {
+    border: 1px solid _PRIMARY_ACCENT_COLOR_;
+}
+
+QComboBox:focus {
+    border: 1px solid _PRIMARY_ACCENT_COLOR_;
+    background-color: _BORDER_COLOR_;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: _BORDER_COLOR_;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(icons/arrow_down_icon.png);
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox::down-arrow:on {
+    image: url(icons/arrow_up_icon.png);
+}
+
+QComboBox QAbstractItemView {
+    background-color: _SECONDARY_BACKGROUND_COLOR_;
+    border: 1px solid _BORDER_COLOR_;
+    selection-background-color: _PRIMARY_ACCENT_COLOR_;
+    selection-color: _BACKGROUND_COLOR_;
+    color: _TEXT_COLOR_;
+}
+
+/* Estilização básica para QMessageBox e seus componentes */
+QMessageBox {
+    background-color: _BACKGROUND_COLOR_;
+    color: _TEXT_COLOR_;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+QMessageBox QLabel {
+    background-color: transparent;
+    color: _TEXT_COLOR_;
+    padding: 10px;
+}
+
+QMessageBox QPushButton {
+    background-color: _PRIMARY_ACCENT_COLOR_;
+    color: _BACKGROUND_COLOR_;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+    font-size: 13px;
+    min-width: 80px;
+    transition: background-color 0.3s ease;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: _PRIMARY_ACCENT_HOVER_COLOR_;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: _PRIMARY_ACCENT_PRESSED_COLOR_;
+}
+
+QMessageBox QPushButton#qt_msgbox_buttonbox_No {
+    background-color: _DANGER_COLOR_;
+    color: white;
+}
+
+QMessageBox QPushButton#qt_msgbox_buttonbox_No:hover {
+    background-color: _DANGER_HOVER_COLOR_;
+}
+
+QMessageBox QPushButton#qt_msgbox_buttonbox_No:pressed {
+    background-color: _DANGER_PRESSED_COLOR_;
+}
